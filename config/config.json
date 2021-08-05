@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "x-space-api-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/xSpaceApi/XSpaceApiWebPart.js",
+          "manifest": "./src/webparts/xSpaceApi/XSpaceApiWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "XSpaceApiWebPartStrings": "lib/webparts/xSpaceApi/loc/{locale}.js"
+  }
+}
