@@ -36,7 +36,7 @@ export default class XSpaceApiWebPart extends BaseClientSideWebPart<IXSpaceApiWe
 
   private _getSpaceApi(): Promise<any>{
     return this.context.httpClient.get(
-      'https://api.spacexdata.com/v4/history',
+      `https://api.spacexdata.com/v4/history`,
       HttpClient.configurations.v1
     )
     .then((response: HttpClientResponse) => {

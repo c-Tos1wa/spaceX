@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styles from './XSpaceApi.module.scss';
 import { IXSpaceApiProps } from './IXSpaceApiProps';
-import { HttpClient, HttpClientResponse } from '@microsoft/sp-http';
 
 
 export default class XSpaceApi extends React.Component<IXSpaceApiProps, {}> {
@@ -13,11 +12,23 @@ export default class XSpaceApi extends React.Component<IXSpaceApiProps, {}> {
         <div className={ styles.container }>
           <div className={ styles.row }>
             <div className={ styles.column }>
-              <span className={ styles.title }>Welcome to SpaceX Api</span>
+              <span className={ styles.title }>Welcome to SpaceX History</span>
             </div>
           </div>
           <div className={styles.row}>
-            <div>Title:{this.props.history.title}</div>
+            <div><strong>Title:</strong>{this.props.history[0].title}</div>
+            <div><strong>Details:</strong>{this.props.history[0].details}</div>
+            <div><strong>Article:</strong>{this.props.history[0].links.article}</div>
+          </div>
+          <div className={styles.row}>
+            <div><strong>Title:</strong>{this.props.history[7].title}</div>
+            <div><strong>Details:</strong>{this.props.history[7].details}</div>
+            <div><strong>Article:</strong>{this.props.history[7].links.article}</div>
+          </div>
+          <div className={styles.row}>
+            <div><strong>Title:</strong>{this.props.history[14].title}</div>
+            <div><strong>Details:</strong>{this.props.history[14].details}</div>
+            <div><strong>Article:</strong>{this.props.history[14].links.article}</div>
           </div>
         </div>
       </div>
